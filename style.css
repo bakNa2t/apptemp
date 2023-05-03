@@ -53,7 +53,7 @@ body {
     font-size: 30px;
     text-align: center;
     color: black;
-    text-shadow: 2px -2px 4px rgba(207, 207, 207, 0.6);
+    text-shadow: 2px -2px 4px rgba(255, 255, 209, 0.6);
 }
 
 .container_input {
@@ -80,6 +80,17 @@ body {
     outline: none;
     color: black;
     background-color: rgba(255, 179, 209, 0.7);
+}
+
+.input_tag::placeholder {
+    font-size: 12px;
+    color: #777;
+}
+
+.input_tag:focus {
+    border-color: #fff;
+    background-color: rgba(255, 255, 209, 0.9);
+    box-shadow: 2px 2px 8px rgba(255, 255, 209, 0.8);
 }
 
 /* hide arrorws from input numbers */
