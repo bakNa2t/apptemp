@@ -103,12 +103,13 @@ noscript h3 {
   font-size: 14px;
   line-height: 1.5;
   padding-left: 10px;
-  padding-bottom: 10px;
 }
 
 .input_tag {
   width: 100%;
   padding: 0.5rem 0.4rem;
+  margin-bottom: 15px;
+  margin-top: 2px;
   border-radius: 7px;
   font-size: 16px;
   font-weight: 500;
@@ -117,6 +118,10 @@ noscript h3 {
   color: black;
   background-color: rgba(255, 179, 209, 0.7);
   transition: 0.4s;
+}
+
+.input_tag:last-child {
+  margin-bottom: 0;
 }
 
 .input_tag::placeholder {
