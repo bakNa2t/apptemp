@@ -1,140 +1,163 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800;900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    position: relative;
-    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+}
+
+/* Noscript message */
+noscript {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+noscript h3 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 0 1rem;
+  border: 1px solid #777;
+  border-radius: 0.8rem;
+  background-color: #663399;
+  box-shadow: 0 0 4px 5px #66339990;
 }
 
 .main_container {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main_container::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(197, 143, 143, 0.25);
-    position: absolute;
-    z-index: 1;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(197, 143, 143, 0.25);
+  position: absolute;
+  z-index: 1;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .container_app {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    width: 100%;
-    border: 4px ridge #1a111055;
-    border-radius: 10px;
-    background-color: rgba(70, 70, 70, 0.85);
-    box-shadow: 0px 0px 10px rgba(78, 53, 99, 0.7);
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  border: 4px ridge #1a111055;
+  border-radius: 10px;
+  background-color: rgba(70, 70, 70, 0.85);
+  box-shadow: 0px 0px 10px rgba(78, 53, 99, 0.7);
 }
 
 .container_title {
-    width: 100%;
-    /* margin: auto; */
-    text-transform: capitalize;
-    font-family: 'Mulish', sans-serif;
-    font-size: 2.6rem;
-    font-weight: 900;
-    text-align: center;
-    color: #1a1110;
-    text-shadow: 0px 0px 4px rgba(200,162,200, 0.8);
+  width: 100%;
+  text-transform: capitalize;
+  font-family: "Mulish", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 900;
+  text-align: center;
+  color: #1a1110;
+  text-shadow: 0px 0px 4px rgba(200, 162, 200, 0.8);
 }
 
 .container_input {
-    margin: 0 auto;
-    padding: 10px;
-    max-width: 250px;
-    font-size: 15px;
-    font-weight: bold;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 250px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .label_tag {
-    font-family:'Open Sans', sans-serif;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 1.5;
-    padding-left: 10px;
-    padding-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.5;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
-    
+
 .input_tag {
-    width: 100%;
-    padding: .5rem .4rem;
-    border-radius: 7px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    outline: none;
-    color: black;
-    background-color: rgba(255, 179, 209, 0.7);
-    transition: .4s;
+  width: 100%;
+  padding: 0.5rem 0.4rem;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  outline: none;
+  color: black;
+  background-color: rgba(255, 179, 209, 0.7);
+  transition: 0.4s;
 }
 
 .input_tag::placeholder {
-    font-style: italic;
-    font-size: 1rem;
-    color: #777;
+  font-style: italic;
+  font-size: 1rem;
+  color: #777;
 }
 
 .input_tag:focus {
-    border-color: #fff;
-    background-color: rgba(255, 255, 209, 0.9);
-    box-shadow: 0px 0px 4px 1px rgba(255, 255, 209, 0.8);
-    transition: .4s;
+  border-color: #fff;
+  background-color: rgba(255, 255, 209, 0.9);
+  box-shadow: 0px 0px 4px 1px rgba(255, 255, 209, 0.8);
+  transition: 0.4s;
 }
 
 .footer {
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    font-family: 'Mulish', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 800;
-    color: #1a1110;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-family: "Mulish", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #1a1110;
 }
 
 .footer a {
-    display: inline-block;
-    font-size: .9rem;
-    text-decoration: none;
-    color: #663399;
-    text-shadow: 0 0 4px rgba(85,85,85,.8);
-    transition: all 0.4s ease-in-out;
+  display: inline-block;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #663399;
+  text-shadow: 0 0 4px rgba(85, 85, 85, 0.8);
+  transition: all 0.4s ease-in-out;
 }
 
 .footer a:hover {
-    transform: translateY(-3px);
-    color: #bf00ff;
-    text-shadow: 0 0 4px rgba(255, 255, 209,.8);
-    transition: all 0.4s ease-in-out;
+  transform: translateY(-3px);
+  color: #bf00ff;
+  text-shadow: 0 0 4px rgba(255, 255, 209, 0.8);
+  transition: all 0.4s ease-in-out;
 }
 
 /* hide arrorws from input numbers */
@@ -151,16 +174,16 @@ input::-webkit-inner-spin-button {
 } */
 
 @media (max-width: 600px) {
-    .container_app {
-        width: 90%;
-    }
-    .container_title {
-        font-size: 1.5rem;
-    }
-    .label_tag {
-        font-size: 12px;
-    }
-    .input_tag {
-        font-size: 14px;
-    }
+  .container_app {
+    width: 90%;
+  }
+  .container_title {
+    font-size: 1.5rem;
+  }
+  .label_tag {
+    font-size: 12px;
+  }
+  .input_tag {
+    font-size: 14px;
+  }
 }
